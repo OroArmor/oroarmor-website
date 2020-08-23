@@ -1,15 +1,31 @@
 {
   "name": "oroarmor-website",
   "version": "1.0.0",
-  "description": "Website files for www.oroarmor.com",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node index.js"
-  },
+  "description": "OroArmor website",
+  "main": "server.js",
+  "repository": "",
+  "license": "SEE LICENSE IN LICENSE",
   "author": "OroArmor",
-  "license": "ISC",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "nodemon -e js,json,pug,css server.js",
+    "coverage": "nyc report --reporter=lcov > coverage.lcov && codecov"
+  },
   "dependencies": {
-    "express": "^4.17.1"
+    "debug": "^3.1.0",
+    "js2xmlparser": "^3.0.0",
+    "kcors": "^2.2.1",
+    "koa": "^2.5.1",
+    "koa-bodyparser": "^4.2.1",
+    "koa-cache-control": "^2.0.0",
+    "koa-compress": "^3.0.0",
+    "koa-favicon": "^2.0.1",
+    "koa-helmet": "^4.0.0",
+    "koa-load-middlewares": "^1.0.0",
+    "koa-minify": "^2.0.1",
+    "koa-pug": "^3.0.0-2",
+    "koa-router": "^7.4.0",
+    "koa-static": "^5.0.0",
+    "nconf": "^0.10.0"
   }
 }

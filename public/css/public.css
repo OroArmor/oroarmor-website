@@ -1,0 +1,13 @@
+body {
+  padding-top: 50px;
+  word-wrap: break-word;
+  background:#fcfcfc;
+}
+#headerTitle {
+  font-family: "Orbitron", bold, monospace;
+  color: red;
+  font-size: 2.5rem;
+}
+.red {
+  color: red;
+}
