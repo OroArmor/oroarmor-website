@@ -27,7 +27,7 @@ let pug = new Pug({
   locals: {
     socialMedia: require('./configs/social.js'),
     nconf: {
-      domain: `${process.env.DOMAIN}:${port}`
+      domain: process.env.NODE_ENV =='production'? `${process.env.DOMAIN}`:`${process.env.DOMAIN}:${port}`
     }
   }
 })
