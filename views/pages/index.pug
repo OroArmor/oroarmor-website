@@ -1,32 +1,38 @@
 extends layout.pug
 
 append main
-  h1 Home
-  div.panel.panel-default
-    div.panel-heading
-      h3 Bio
-    div.panel-body
-      p.
-        Hello, my name is Eli Orona and this is my
-        website. I currently attend the University of Washington as a Freshman. I don't have a declared major yet, but I plan on applying to the Computer Science and Computer Engineering schools. In my free time I like to play video games like
-        Minecraft and Overwatch, <a href="./music.html">write music</a>, and
-        <a href="./programming.html">code</a> some cool things.
-  div.row.row-default
-    div.col-md-3.panel.panel-default
+  div.container
+    h1 Home
+    div.panel.panel-default
       div.panel-heading
-        h3 Blog
+        h3 Bio
       div.panel-body
-        
-    div.col-md-9
-      div.panel.panel-default
+        p.
+          Hello, my name is Eli Orona and this is my
+          website. I currently attend the University of Washington as a Freshman. I don't have a declared major yet, but I plan on applying to the Computer Science and Computer Engineering schools. In my free time I like to play video games like
+          Minecraft and Overwatch, <a href=`${nconf.domain}/music.html`>write music</a>, and
+          <a href=`${nconf.domain}/programming.html`>code</a> some cool things.
+          
+    div.row.row-default
+      div.col-md-3.panel.panel-default
         div.panel-heading
-          h3 Programming
+          h3 Blog
         div.panel-body
-      div.panel.panel-default
-        div.panel-heading
-          h3 Programming
-        div.panel-body
-      div.panel.panel-default
-        div.panel-heading
-          h3 Programming
-        div.panel-body
+          p programming
+          
+      div.col-md-9
+        div.panel.panel-default
+          div.panel-heading
+            h3 Programming
+          div.panel-body
+            p programming
+        div.panel.panel-default
+          div.panel-heading
+            h3 Programming
+          div.panel-body
+            p programming
+        div.panel.panel-default
+          div.panel-heading
+            h3 Programming
+          div.panel-body
+            p programming

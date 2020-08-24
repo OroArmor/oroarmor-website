@@ -27,7 +27,7 @@ let pug = new Pug({
   locals: {
     socialMedia: require('./configs/social.js'),
     nconf: {
-      get: (domain) => 'localhost:3000'
+      domain: process.env.DOMAIN || 'localhost:3000'
     }
   }
 })

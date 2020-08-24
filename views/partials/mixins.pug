@@ -5,7 +5,7 @@ mixin button(link, text, icon, target)
 
 mixin contactButton(contactInfo)
   if (contactInfo.type === 'email')
-    +button(`//www.${nconf.get('DOMAIN')}/api/email?alias=${contactInfo.alias}&domain=${contactInfo.domain}`, 'Email', 'envelope', '_blank')
+    +button(`//www.${nconf.domain}/api/email?alias=${contactInfo.alias}&domain=${contactInfo.domain}`, 'Email', 'envelope', '_blank')
   else if (contactInfo.type === 'github')
     +button(`https://github.com/${contactInfo.username}`, 'GitHub', 'github', '_blank')
   else if (contactInfo.type === 'website')
