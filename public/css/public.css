@@ -1,13 +1,24 @@
 body {
   padding-top: 50px;
   word-wrap: break-word;
-  background:#fcfcfc;
+  background: #fcfcfc;
 }
+
 #headerTitle {
   font-family: "Orbitron", bold, monospace;
-  color: red;
+  color: blue;
   font-size: 2.5rem;
 }
+
+#nav-pages li a {
+  height: 54px;
+}
+
 .red {
   color: red;
+}
+
+.header-logo {
+  height: 25px;
+  border-radius: 12.5px;
 }

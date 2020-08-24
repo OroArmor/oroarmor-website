@@ -10,13 +10,24 @@ block header
             span.icon-bar
           a.navbar-brand#headerTitle(href='/') OroArmor
         div.collapse.navbar-collapse#navlinks
-          // Pages
-          //- TODO Add active page detection
-          
-
+          ul.nav.navbar-nav#nav-pages
+            li
+              a(href='/') Home
+            li
+              a(href='/programming') Programming
+            li
+              a(href='/music') Music
+            li
+              a(href='/mods') Minecraft Mods
           // Social media
           ul.nav.navbar-nav.navbar-right.nav-pills
             each account in socialMedia
               li
-                a(class=`fa fa-${account.icon}` href=account.url target='_blank')
-                  span.sr-only= account.service
+                if account.icon
+                  a(class=`fa fa-${account.icon} fa-2x` href=account.url target='_blank')
+                    span.sr-only= account.service
+                else
+
+                  a(class='' href=account.url target='_blank')
+                    img.header-logo.img-responsive.lazy.center-block(data-original=`//${nconf.domain}/images/social/${account.logo}` src=`//${nconf.domain}/images/social/${account.logo}` alt=`${account.service}` title=`${account.service}`)
+                    span.sr-only= account.service

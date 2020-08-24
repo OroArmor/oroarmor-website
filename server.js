@@ -27,7 +27,7 @@ let pug = new Pug({
   locals: {
     socialMedia: require('./configs/social.js'),
     nconf: {
-      domain: process.env.DOMAIN || 'localhost:3000'
+      domain: `${process.env.DOMAIN}:${port}`
     }
   }
 })
@@ -49,7 +49,10 @@ app.use(async (ctx, next) => {
 
       // Render the error page
       ctx.render('error', {
-        error: err
+        error: err,
+        seo: {
+          title: 'Error | OroArmor'
+        }
       })
       ctx.status = err.status // Correct the response back to an error response (since ctx.render changes it to 200)
 

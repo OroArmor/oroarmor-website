@@ -1,27 +1,27 @@
 module.exports = [
   {
     service: 'GitHub',
-    url: 'https://github.com/oroarmor',
-    icon: 'github'
+    url: 'https://github.com/OroArmor',
+    logo: 'github.png'
   },
   {
     service: 'YouTube - General',
     url: 'https://www.youtube.com/channel/UCsbVQJhwgXIJ035XUCN9IRw',
-    icon: 'youtube'
+    logo: 'orohead.jpg'
   },
   {
     service: 'Youtube - Music',
     url: 'https://www.youtube.com/channel/UCSp1vBvYwRBRxwlEm3aRdYg',
-    icon: 'youtube-music'
+    logo: 'elioronamusic.png'
   },
   {
     service: 'CurseForge',
     url: 'https://www.curseforge.com/members/oroarmor/projects',
-    icon: 'curseforge'
+    logo: 'curseforge.png'
   },
   {
     service: 'Discord',
-    url: 'https://www.discord.gg/channels/@me/365708770262777856',
-    icon: 'discord'
+    url: 'https://www.discord.gg/dGCvj56',
+    logo: "discord.svg"
   }
 ]
