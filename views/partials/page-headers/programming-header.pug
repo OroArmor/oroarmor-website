@@ -1,0 +1,9 @@
+div.panel.panel-default
+  div.panel-heading
+    h3 Programming
+  div.panel-body
+    each list in programming.lists
+      h4=`${list.name}`
+      ul.list-inline
+        each value in list.values
+          li=`${value}`
