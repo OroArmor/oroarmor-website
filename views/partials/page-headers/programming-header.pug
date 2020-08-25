@@ -3,7 +3,7 @@ div.panel.panel-default
     h3 Programming
   div.panel-body
     each list in programming.lists
-      h4=`${list.name}`
+      h3.mod-title=`${list.name}`
       ul.list-inline
         each value in list.values
           li=`${value}`

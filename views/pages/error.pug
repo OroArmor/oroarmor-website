@@ -3,13 +3,14 @@ extends layout.pug
 append main
   h1= `${error.status} error!`
 
-  //- Custom error messages based on the status
-  if error.status === 404
-    h3 Sorry, this page does not exist!
-  else
-    h3 Sorry, the website is having some issues
-    h3.faded Something happened, we're not sure what, but hopefully it doesn't happen again
+  div#error
+    //- Custom error messages based on the status
+    if error.status === 404
+      h3 Sorry, this page does not exist! It is likely that I haven't finished it yet if you clicked on a link.
+    else
+      h3 Sorry, the website is having some issues
+      h3.faded Something happened, we're not sure what, but hopefully it doesn't happen again
 
-  //- Actions for the user
-  h4 You might try #[a(href='#' onclick='window.location.reload()') refreshing the page]
-  h4 Or, if you ended up in the wrong place, #[a(href=`http://${nconf.domain}/`) here's our homepage]
+    //- Actions for the user
+    h4 You might try #[a(href='#' onclick='window.location.reload()') refreshing the page]
+    h4 Or, if you ended up in the wrong place, #[a(href=`http://${nconf.domain}/`) here's our homepage]

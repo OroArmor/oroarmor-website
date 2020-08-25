@@ -7,12 +7,12 @@ module.exports = [
   {
     service: 'YouTube - General',
     url: 'https://www.youtube.com/channel/UCsbVQJhwgXIJ035XUCN9IRw',
-    logo: 'orohead.jpg'
+    icon: 'youtube-play'
   },
   {
     service: 'Youtube - Music',
     url: 'https://www.youtube.com/channel/UCSp1vBvYwRBRxwlEm3aRdYg',
-    logo: 'elioronamusic.png'
+    icon: 'music'
   },
   {
     service: 'CurseForge',
@@ -23,5 +23,10 @@ module.exports = [
     service: 'Discord',
     url: 'https://www.discord.gg/dGCvj56',
     logo: "discord.svg"
+  },
+  {
+    service: 'Twitter',
+    url: 'https://twitter.com/realOroArmor',
+    logo: 'twitter.svg'
   }
 ]

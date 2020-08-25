@@ -10,7 +10,7 @@ module.exports = [{
   },
   {
     name: "Slime Block in Redstone Tab",
-    desc: "Moves the Slime Block to the Redstone tab",
+    desc: "Moves the Slime Block to the Redstone tab.",
     id: "slime_block",
     links: {
       github: "https://github.com/OroArmor/SlimeBlockInRedstoneTab",

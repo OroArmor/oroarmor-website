@@ -11,7 +11,7 @@ module.exports = {
   }, {
     name: "Frameworks used",
     values: [
-      "OpenGl / LWJGL",
+      "OpenGl/LWJGL",
       "WPILib",
       "P5.js",
       "Processing",

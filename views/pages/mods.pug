@@ -12,8 +12,9 @@ append main
         div.panel-body
           div.col-md-7
             p=`${mod.extdesc}`
-            p.no-margin Find on #[a(href=`${mod.links.curseforge}`) CurseForge]
-            p Find on #[a(href=`${mod.links.github}`) GitHub]
+            div
+              p.no-margin Find on #[a(href=`${mod.links.curseforge}`) CurseForge]
+              p Find on #[a(href=`${mod.links.github}`) GitHub]
           div.col-md-5
             center
               img.img.img-responsive(src=`//${nconf.domain}/images/mods/${mod.id}.png` alt=`${mod.name}` title=`${mod.name}` width="300px")

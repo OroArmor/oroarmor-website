@@ -1,6 +1,7 @@
 block footer
   footer#footer
-    span.col-sm-12.text-center.text-muted &copy; #{(new Date()).getFullYear()} OroArmor
+    div#footer-copy
+      span.col-sm-12.text-center &copy; #{(new Date()).getFullYear()} OroArmor
 
   block scripts
     // jQuery
@@ -13,4 +14,4 @@ block footer
     script(src='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js' integrity='sha256-U5ZEeKfGNOja007MMD3YBI0A3OSZOQbeG6z2f2Y0hu8=' crossorigin='anonymous')
 
     // Common JS
-    script(src=`${nconf.domain}/js/main.js`)
+    script(src=`//${nconf.domain}/js/main.js`)

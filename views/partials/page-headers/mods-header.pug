@@ -1,12 +1,15 @@
 div.panel.panel-default
   div.panel-heading
-    h3 My Minecraft Mods
+    h3 My Mods
   div.panel-body
     div.row.row-default
       each mod in mods
         div.col-md-6
-          h4 #[a(href=`${nconf.domain}/mods/${mod.id}`)=`${mod.name}`]
-          p=`${mod.desc}`
-          img.img.img-responsive(src=`//${nconf.domain}/images/mods/${mod.id}.png` alt=`${mod.name}` title=`${mod.name}` width="300px")
-          p.no-margin Find on #[a(href=`${mod.links.curseforge}`) CurseForge]
-          p Find on #[a(href=`${mod.links.github}`) GitHub]
+          center
+            h3.mod-title #[a(href=`${nconf.domain}/mods/${mod.id}`)=`${mod.name}`]
+            p=`${mod.desc}`
+            img.img.img-responsive(src=`//${nconf.domain}/images/mods/${mod.id}.png` alt=`${mod.name}` title=`${mod.name}` width="300px")
+            p.no-margin
+              strong Find on #[a(href=`${mod.links.curseforge}`) CurseForge]
+            p 
+              strong Find on #[a(href=`${mod.links.github}`) GitHub]

@@ -7,8 +7,8 @@ html(lang='en')
   head
     block head
       include /head
-  body.container
+  body.container#body
     include /header
-      section#main
-        block main
-      include /footer
+    section#main
+      block main
+    include /footer

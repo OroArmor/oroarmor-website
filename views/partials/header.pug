@@ -1,6 +1,6 @@
 block header
   header
-    nav.navbar.navbar-default.navbar-fixed-top
+    nav.navbar.navbar-default.navbar-fixed-top#header
       div.container-fluid
         div.navbar-header
           a.navbar-toggle.collapsed(data-toggle='collapse' data-target='#navlinks')
@@ -24,10 +24,10 @@ block header
             each account in socialMedia
               li
                 if account.icon
-                  a(class=`fa fa-${account.icon} fa-2x` href=account.url target='_blank')
+                  a(class=`fa fa-${account.icon} fa-2x header-icon` href=account.url target='_blank')
                     span.sr-only= account.service
                 else
-
-                  a(class='' href=account.url target='_blank')
-                    img.header-logo.img-responsive.lazy.center-block(data-original=`//${nconf.domain}/images/social/${account.logo}` src=`//${nconf.domain}/images/social/${account.logo}` alt=`${account.service}` title=`${account.service}`)
+                  
+                  a(class='header-logo' href=account.url target='_blank')
+                    img.header-logo-img.img-responsive.lazy.center-block(data-original=`//${nconf.domain}/images/social/${account.logo}` src=`//${nconf.domain}/images/social/${account.logo}` alt=`${account.service}` title=`${account.service}`)
                     span.sr-only= account.service
