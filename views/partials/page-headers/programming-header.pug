@@ -1,9 +1,13 @@
-div.panel.panel-default
+div.panel
   div.panel-heading
-    h3 Programming
+    div.panel-heading-header
+      h3 Programming
+    div.panel-heading-content
+      each list in programming.lists
+        h3.mod-title=`${list.name}`
+        ul.list-inline
+          each value in list.values
+            li=`${value}`
   div.panel-body
-    each list in programming.lists
-      h3.mod-title=`${list.name}`
-      ul.list-inline
-        each value in list.values
-          li=`${value}`
+    div.panel-body-images
+      img(src = `//${nconf.domain}/images/programming-code-background.jpg`)

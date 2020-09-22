@@ -20,6 +20,14 @@ router.get('/', async ctx => {
     mods
   })
 })
+.get('/mods/netherite_plus', async ctx =>{
+  await ctx.render('mod_pages/netherite_plus', {
+    seo: {
+      title: 'Netherite Plus | OroArmor'
+    },
+    mods
+  })
+})
 
 
 module.exports = router

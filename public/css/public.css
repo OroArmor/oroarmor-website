@@ -10,8 +10,96 @@
   --color-light: #FBFBFF;
   --panel-radius: 5px;
   --header-height: 54px;
+  --black: black;
 }
 
+/** Start Layout **/
+:root {
+  padding: 0;
+  margin: 0;
+}
+
+* {
+  margin: 0;
+}
+
+#main, #main .container {
+  padding: 0;
+  margin: 0;
+}
+
+.panel:last-child {
+  height: calc(100vh - 100px);
+}
+
+.panel {
+  height: calc(100vh - 50px);
+  width: 100%;
+  padding-top: 0;
+  margin-bottom: 0;
+}
+
+.panel .panel-heading {
+  padding-top: 15px;
+  height: 50%;
+  display: inline-block;
+  width: 100%;
+}
+
+.panel .panel-heading .panel-heading-content {
+  position: relative;
+  right: 0px;
+  bottom: 0px;
+  text-align: right;
+}
+
+.panel .panel-heading .panel-heading-header {
+  position: relative;
+  left: 0px;
+  top: 0px;
+}
+
+.panel h3 {
+  margin: 0;
+}
+
+.panel-body{
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  max-width: 100vw;
+  height: 50%;
+}
+
+.panel-body-images {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* position: relative; */
+  /* top: -21vh; */
+}
+
+.panel-body-images .fill {
+  flex-shrink: 0;
+  min-width: 100vw;
+  width: max(100vw, 50vh);
+  min-height: 100vw;
+}
+
+.panel-body-images .fit {
+  height: 50vh;
+  width: auto;
+}
+
+#mod-list {
+  list-style: none;
+}
+
+#mod-list li {
+  padding: 5px;
+}
+
+/** End Layout **/
 /** Start General formatting **/
 html, body {
   height: 100%;
@@ -24,8 +112,7 @@ a {
 #body {
   padding-top: 50px;
   word-wrap: break-word;
-  background: var(--color-accent-2);
-  background: linear-gradient(to top, var(--color-accent-4) 0%, var(--color-accent-3) 100%);
+  background: var(--black);
   background-attachment: fixed;
 }
 
@@ -50,11 +137,15 @@ body>section#main>div#error a {
   margin-top: 10px;
 }
 
+.orbitron {
+  font-family: "Orbitron", bold, monospace;
+}
+
 /** End General formatting **/
 /** Start Header formatting **/
 #header {
-  background-color: var(--color-accent-4);
-  border-bottom: 2px solid black;
+  background-color: var(--black);
+  border-bottom: 2px solid var(--color-accent-4);
 }
 
 #headerTitle {
@@ -92,20 +183,12 @@ body>section#main>div#error a {
 /** End Header formatting **/
 /** Start Panel formatting **/
 .panel {
-  background-color: var(--color-accent-2);
-  color: var(--color-dark);
-  border-color: var(--color-accent-4);
-  border-radius: var(--panel-radius);
+  background-color: var(--color-dark);
+  color: var(--color-light);
 }
 
 .panel .panel-heading {
-  background-color: var(--color-accent-3);
-  border-color: var(--color-accent-4);
-  border-radius: var(--panel-radius);
-}
-
-.panel .panel-heading h3 {
-  color: var(--color-dark);
+  background-color: var(--black);
 }
 
 /** End Panel formatting **/
@@ -130,4 +213,4 @@ body>section#main>div#error a {
   right: 0;
 }
 
-/** Start General formatting **/
+/** End Footer formatting **/
