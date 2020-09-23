@@ -10,12 +10,12 @@ module.exports = [{
   },
   {
     name: "Slime Block in Redstone Tab",
-    desc: "Moves the Slime Block to the Redstone tab.",
+    desc: "Reorginizes the creative inventory with configurable groups and items.",
     id: "slime_block",
     links: {
       github: "https://github.com/OroArmor/SlimeBlockInRedstoneTab",
       curseforge: "https://www.curseforge.com/minecraft/mc-mods/slime-block-in-the-redstone-tab"
     },
-    extdesc: "The Slime Block is more of a redstone feature than a decoration feature, so I decided to make a small client side mod that does just that. There is nothing more to this mod."
+    extdesc: "The creative inventory is extremely cluttered and needs updating. This client-side mod allows you to move any item or tag to any tab, and creating new tabs. There are two config files that can be dynamically changed and updated with the /reload command in Minecraft. Check Github for a more in depth explaination of the config files."
   }
 ]

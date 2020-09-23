@@ -1,0 +1,27 @@
+.lang-node{
+  background-image: url("https://nodejs.org/static/images/favicons/favicon-32x32.png");
+}
+
+.lang-fabric {
+  background-image: url("https://www.fabricmc.net/assets/logo.png");
+}
+
+.lang-lwjgl {
+  background-image: url("https://www.lwjgl.org/img/fav/favicon.svg");
+}
+
+.lang-unity {
+  background-image: url("https://unity.com/themes/contrib/unity_base/images/favicons/favicon.png");
+}
+
+.lang-wpilib {
+  background-image: url("https://static1.squarespace.com/static/5d4b06a67cd3580001ded283/t/5d4b0891a9313a000111b284/1592323677829/?format=1500w");
+}
+
+.lang-p5js {
+  background-image: url("https://p5js.org/assets/img/favicon.ico");
+}
+
+.lang-processing {
+  background-image: url("https://processing.org/favicon.ico");
+}

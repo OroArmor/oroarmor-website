@@ -9,7 +9,7 @@
   --color-medium: #80858b;
   --color-light: #FBFBFF;
   --panel-radius: 5px;
-  --header-height: 54px;
+  --header-height: 100px;
   --black: black;
 }
 
@@ -29,11 +29,11 @@
 }
 
 .panel:last-child {
-  height: calc(100vh - 100px);
+  height: calc(100vh - calc(var(--header-height) + 50px));
 }
 
 .panel {
-  height: calc(100vh - 50px);
+  height: calc(100vh - var(--header-height));
   width: 100%;
   padding-top: 0;
   margin-bottom: 0;
@@ -59,11 +59,27 @@
   top: 0px;
 }
 
-.panel h3 {
+.panel .panel-heading .panel-heading-header h3 {
   margin: 0;
+  margin-bottom: 15px;
+  font-size: 7em;
+  font-family: "Orbitron", bold, monospace;
 }
 
-.panel-body{
+.panel .panel-heading .panel-heading-content h3 {
+  margin: 0;
+  margin-bottom: 15px;
+  font-size: 4em;
+  font-family: "Orbitron", bold, monospace;
+}
+
+.panel .panel-heading .panel-heading-content p {
+  margin: 0;
+  font-size: 2em;
+  font-family: "Roboto";
+}
+
+.panel-body {
   margin: 0;
   padding: 0;
   overflow: hidden;
@@ -110,7 +126,7 @@ a {
 }
 
 #body {
-  padding-top: 50px;
+  padding-top: var(--header-height);
   word-wrap: break-word;
   background: var(--black);
   background-attachment: fixed;
@@ -146,12 +162,14 @@ body>section#main>div#error a {
 #header {
   background-color: var(--black);
   border-bottom: 2px solid var(--color-accent-4);
+  font-size: 4rem;
 }
 
 #headerTitle {
   font-family: "Orbitron", bold, monospace;
+  padding-top: 35px;
   color: var(--color-accent-1);
-  font-size: 2.5rem;
+  font-size: 7rem;
   height: var(--header-height);
 }
 
@@ -160,23 +178,28 @@ body>section#main>div#error a {
 }
 
 #nav-pages li a {
+  padding-top: 35px;
   height: var(--header-height);
 }
 
-#social-nav {
+#nav-social {
   height: var(--header-height);
 }
 
 .header-logo {
   height: var(--header-height);
+  padding-top: 35px;
 }
 
 .header-logo-img {
+  margin-top:20px;
   height: 25px;
   border-radius: 12.5px;
 }
 
 .header-icon {
+  margin-top:20px;
+  font-size: 2.5rem !important;
   height: var(--header-height);
 }
 
@@ -214,3 +237,42 @@ body>section#main>div#error a {
 }
 
 /** End Footer formatting **/
+.programming {
+  width: 3em;
+  height: 3em;
+  padding-top: 0em;
+}
+
+.programming_lang {
+  font-size: 1.25em;
+}
+
+#programming-list a {
+  text-decoration: none;
+  color: var(--color-light);
+}
+
+.mod-info {
+  width: 100%;
+  background-color: inherit;
+  transition: background-color 1s;
+  padding: 0 50px 0 50px;
+}
+
+#mod-list {
+  padding: 0px;
+}
+
+.mod-info:hover {
+  background-color: var(--color-dark);
+}
+
+.mod-info p {
+  overflow: hidden;
+  height: 0;
+  transition: height 1s;
+}
+
+.mod-info:hover p {
+  height: 2em;
+}

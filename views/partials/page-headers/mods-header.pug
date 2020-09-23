@@ -6,7 +6,9 @@ div.panel
       ul#mod-list
         each mod in mods
           li
-            h3.mod-title #[a(href=`//${nconf.domain}/mods/${mod.id}`)=`${mod.name}`]
+            div.mod-info
+              h3.mod-title #[a(href=`//${nconf.domain}/mods/${mod.id}`)=`${mod.name}`]
+              p=`${mod.desc}`
   div.panel-body
     div.panel-body-images
       img.fill(src = `//${nconf.domain}/images/mod-background.png`)

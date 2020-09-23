@@ -1,0 +1,87 @@
+@media screen and (min-width:1010px)and (max-width:1380px) {
+  #nav-pages li a {
+    font-size: 2rem !important;
+    padding-left: 5px;
+    padding-right: 5px;
+  }
+
+  #nav-social li a{
+    padding-left: 5px;
+    padding-right: 10px;
+  }
+  #nav-social:last-child li a{
+    padding-right: 20px;
+  }
+}
+
+@media screen and (min-width:768px)and (max-width:1010px) {
+  #headerTitle {
+    font-size: 4rem !important;
+    padding-top: 35px;
+  }
+
+  #nav-pages li a {
+    font-size: 1.5rem !important;
+    padding-left: 4px;
+    padding-right: 4px;
+  }
+
+  #nav-social li a{
+    padding-left: 4px;
+    padding-right: 9px;
+  }
+  #nav-social:last-child li a{
+    padding-right: 20px;
+  }
+}
+
+@media screen and (max-width:700px) {
+  :root {
+    --header-height: 50px;
+  }
+
+  #headerTitle {
+    font-size: 3rem !important;
+    padding-top: 15px;
+  }
+
+  .panel .panel-heading .panel-heading-header h3 {
+    font-size: 2em !important;
+  }
+
+  .panel .panel-heading .panel-heading-content h3 {
+    font-size: 1em;
+  }
+
+  .panel .panel-heading .panel-heading-content p {
+    font-size: 0.75em;
+  }
+
+  #programming-list li {
+    font-size: 1em;
+    height: 1em;
+    padding: 3px;
+  }
+
+  #programming-list li .programming {
+    width: 1em;
+  }
+
+  .mod-title {
+    margin-bottom: 0px !important;
+  }
+
+  .mod-info {
+    padding: 2px;
+  }
+}
+
+@media screen and (max-width:370px) {
+  .mod-info p {
+    height: 3em;
+  }
+
+  .mod-info p {
+    height: 3em !important;
+  }
+}
