@@ -2,13 +2,13 @@ div.panel
   div.panel-heading
     div.panel-heading-header
       h3 My Mods  
-    div.panel-heading-content.row.row-default
+    div.panel-heading-content
       ul#mod-list
         each mod in mods
           li
             div.mod-info
               h3.mod-title #[a(href=`//${nconf.domain}/mods/${mod.id}`)=`${mod.name}`]
-              p=`${mod.desc}`
+              p.mod-hidden=`${mod.desc}`
   div.panel-body
     div.panel-body-images
       img.fill(src = `//${nconf.domain}/images/mod-background.png`)

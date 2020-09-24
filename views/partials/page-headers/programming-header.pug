@@ -3,22 +3,25 @@ div.panel
     div.panel-heading-header
       h3 Programming
     div.panel-heading-content
-      each list in programming.lists
-        h3.mod-title=`${list.name}`
-        ul.list-inline#programming-list
-          each value in list.values
-            li.programming_lang
-              if(value.link != undefined)
-                a(href=`${value.link}` target=`_blank`)
-                  if(value.icon != undefined)
-                    i.programming(class=`lang-${value.icon}`)
-                  else
-                    p=`${value.name}`
-              else  
-                if(value.icon != undefined)
-                  i.programming(class=`lang-${value.icon}`)
-                else
-                  p=`${value.name}`
+      ul#programming-content
+        each list in programming.lists
+          li
+            div.mod-info(id=`${list.name}`)
+              h3.mod-title=`${list.name}`
+              ul.list-inline.mod-hidden#programming-list
+                each value in list.values
+                  li.programming_lang
+                    if(value.link != undefined)
+                      a(href=`${value.link}` target=`_blank`)
+                        if(value.icon != undefined)
+                          i.programming(class=`lang-${value.icon}`)
+                        else
+                          p=`${value.name}`
+                    else  
+                      if(value.icon != undefined)
+                        i.programming(class=`lang-${value.icon}`)
+                      else
+                        p=`${value.name}`
   div.panel-body
     div.panel-body-images
       img(src = `//${nconf.domain}/images/programming-code-background.jpg`)

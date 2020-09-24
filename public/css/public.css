@@ -40,6 +40,7 @@
 }
 
 .panel .panel-heading {
+  padding: 0;
   padding-top: 15px;
   height: 50%;
   display: inline-block;
@@ -100,6 +101,8 @@
   min-width: 100vw;
   width: max(100vw, 50vh);
   min-height: 100vw;
+  position: relative;
+  top: calc(calc(max(100vw, 50vh) / -4) * 1);
 }
 
 .panel-body-images .fit {
@@ -112,7 +115,7 @@
 }
 
 #mod-list li {
-  padding: 5px;
+  padding: 5px 0 5px 0;
 }
 
 /** End Layout **/
@@ -192,13 +195,13 @@ body>section#main>div#error a {
 }
 
 .header-logo-img {
-  margin-top:20px;
+  margin-top: 20px;
   height: 25px;
   border-radius: 12.5px;
 }
 
 .header-icon {
-  margin-top:20px;
+  margin-top: 20px;
   font-size: 2.5rem !important;
   height: var(--header-height);
 }
@@ -238,8 +241,8 @@ body>section#main>div#error a {
 
 /** End Footer formatting **/
 .programming {
-  width: 3em;
-  height: 3em;
+  width: 2em;
+  height: 2em;
   padding-top: 0em;
 }
 
@@ -256,23 +259,32 @@ body>section#main>div#error a {
   width: 100%;
   background-color: inherit;
   transition: background-color 1s;
-  padding: 0 50px 0 50px;
-}
-
-#mod-list {
-  padding: 0px;
+  padding: 0 25px 0 25px;
 }
 
 .mod-info:hover {
   background-color: var(--color-dark);
 }
 
-.mod-info p {
+#mod-list {
+  padding: 0px;
+}
+
+.mod-info .mod-hidden {
   overflow: hidden;
   height: 0;
   transition: height 1s;
 }
 
-.mod-info:hover p {
+.mod-info:hover .mod-hidden {
   height: 2em;
+}
+
+.mod-info:hover #programming-list {
+  height: 3.25em;
+}
+
+#programming-content {
+  list-style: none;
+  padding-left: 0px;
 }
