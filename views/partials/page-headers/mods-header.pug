@@ -8,7 +8,5 @@ div.panel
           li
             div.mod-info
               h3.mod-title #[a(href=`//${nconf.domain}/mods/${mod.id}`)=`${mod.name}`]
-              p.mod-hidden=`${mod.desc}`
-  div.panel-body
-    div.panel-body-images
-      img.fill(src = `//${nconf.domain}/images/mod-background.png`)
+              p.mod-hidden=`${mod.description}`
+  div.panel-body#mods-background

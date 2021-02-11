@@ -1,8 +1,10 @@
 extends layout.pug
 
+append head
+  link(rel='stylesheet' href=`//${nconf.domain}/css/mods.css`)
 append main
   h1 Mods
-  p I have created a couple minecraft mods to help improve your enjoyment of the game. Some of them add a bunch of content, like <em>Netherite Plus</em>, while others are client side improvements, like <em>Slime Block in Redstone Tab</em>. Most of my mods will try to keep a vanilla feeling, as I think that is the best way to enjoy the game. 
+  p.blurb I have created a couple minecraft mods to help improve your enjoyment of the game. Some of them add a bunch of content, like <em>Netherite Plus</em>, while others are client side improvements, like <em>Slime Block in Redstone Tab</em>. Most of my mods will try to keep a vanilla feeling, as I think that is the best way to enjoy the game. 
 
   each mod in mods
     div.panel
@@ -11,10 +13,10 @@ append main
           h3 #[a(href=`//${nconf.domain}/mods/${mod.id}`)=`${mod.name}`]
         div.panel-heading-content
           div
-            p=`${mod.extdesc}`
+            p=`${mod.extendedDescription}`
             div
-              p.no-margin Find on #[a(href=`${mod.links.curseforge}`) CurseForge]
-              p Find on #[a(href=`${mod.links.github}`) GitHub]
+              for link in mod.links
+                p Find on #[a(href=`${link.link}`)=`${link.name}`]
       div.panel-body
-        div.panel-body-images
+        div.panel-body-images.pixelated-image
           img.fit(src=`//${nconf.domain}/images/mods/${mod.id}.png` alt=`${mod.name}` title=`${mod.name}` width="300px")

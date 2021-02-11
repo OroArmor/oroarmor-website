@@ -1,0 +1,16 @@
+extends ../layout.pug
+
+append head
+  link(rel='stylesheet' href=`//${nconf.domain}/css/mod.css`)  
+
+append main
+  h1=`${mod.name}`
+
+  p=`${mod.extendedDescription}`
+  
+  img.pixelated-image(src=`//${nconf.domain}/images/mods/${mod.id}.png` alt=`${mod.name}` title=`${mod.name}`)
+  
+  ul.link-list
+    for link in mod.links
+      li
+        p Find on #[a(href=`${link.link}`)=`${link.name}`]
