@@ -1,10 +1,4 @@
 @media screen and (max-height:1000px) {
-  #programming-content>li {
-    display: inline;
-    width: 33%;
-    float: left;
-  }
-
   #programming-content li .mod-info .mod-title {
     font-size: 3.5rem;
   }
