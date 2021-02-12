@@ -257,7 +257,7 @@ li>.header-icon:hover {
   background-color: var(--color-dark);
 }
 
-#mod-list {
+.drop-list {
   padding: 0px;
 }
 
