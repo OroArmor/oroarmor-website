@@ -41,16 +41,16 @@
   display: flex;
   flex-direction: row;
   margin: auto;
-  height:calc(100vh - var(--header-height));
+  height: calc(100vh - var(--header-height));
 }
 
 .panel:last-child {
-  height:calc(100vh - calc(var(--header-height) + var(--footer-height)));
+  height: calc(100vh - calc(var(--header-height) + var(--footer-height)));
 }
 
 .panel-heading {
   width: 50%;
-  padding:0;
+  padding: 0;
 }
 
 .panel-heading .panel-heading-header {
@@ -189,11 +189,11 @@ body>section#main>div#error a {
   background: none !important;
 }
 
-li > .header-icon {
+li>.header-icon {
   padding-top: 35px !important;
 }
 
-li > .header-icon:hover {
+li>.header-icon:hover {
   background-color: var(--color-accent-3) !important;
 }
 
@@ -247,7 +247,7 @@ li > .header-icon:hover {
 }
 
 .mod-info {
-  width: 100%;
+  width: 100% !important;
   background-color: inherit;
   transition: background-color 1s;
   padding: 0 25px 0 25px;
@@ -259,12 +259,6 @@ li > .header-icon:hover {
 
 #mod-list {
   padding: 0px;
-}
-
-.mod-info .mod-hidden {
-  overflow: hidden;
-  height: 0;
-  transition: height 1s;
 }
 
 #programming-code-background {
@@ -279,20 +273,28 @@ li > .header-icon:hover {
   background-position: center;
 }
 
-
 #mods-background {
   background-image: url(/images/mod-background.png);
   background-size: cover;
   background-position: center;
 }
 
-.mod-info:hover .mod-hidden {
-  height: 4em;
+.mod-info .mod-hidden {
+  opacity: 1;
 }
 
-.mod-info:hover #programming-list {
-  height: 4.5em;
+.mod-info:not(:hover) .mod-hidden {
+  font-size: 0 !important;
+  opacity: 0;
+  transition: opacity 1s,
+    font-size 0.2s;
 }
+
+.mod-info:hover .mod-hidden {
+  transition: font-size 0.2s,
+    opacity 1s;
+}
+
 
 #programming-content {
   list-style: none;
