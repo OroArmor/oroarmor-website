@@ -20,6 +20,7 @@ router.get('/', async ctx => {
     mods
   })
 })
+
 for(modId in mods){
   const mod = mods[modId]
   router.get(`/mods/${mod.id}`, async ctx =>{
