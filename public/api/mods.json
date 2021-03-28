@@ -75,6 +75,26 @@
           "link": "https://modrinth.com/mod/block-quantity-scanner"
         }
       ]
+    },
+    {
+      "name": "Custom Item Range Combination",
+      "id": "custom_item_range_combination",
+      "description": "Allows for the changing of how far item entities combine in Minecraft.",
+      "extendedDescription": "Allows for the changing of how far item entities combine in Minecraft. Optional client-side. I will not port this mod to forge. Should work on all Minecraft versions fabric works on. You can change the range by editing the config file: `custom_item_range_combination.json`, or running the command `/custom_item_range_combination range item_combine_range <range>`",
+      "links": [
+        {
+          "name": "GitHub",
+          "link": "https://github.com/OroArmor/CustomItemRangeCombination"
+        },
+        {
+          "name": "CurseForge",
+          "link": "https://www.curseforge.com/minecraft/mc-mods/custom-item-range-combination"
+        },
+        {
+          "name": "Modrinth",
+          "link": "https://modrinth.com/mod/custom-item-range-combination"
+        }
+      ]
     }
   ]
 }
