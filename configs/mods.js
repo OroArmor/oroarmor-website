@@ -106,7 +106,7 @@ module.exports = [{
     name: "Portal Helper",
     id: "portal-helper",
     description: "Helps with the creation of new portals",
-    extendedDescription: "Helps you visualize where your portals need to go. Create a new portal with the "n" key",
+    extendedDescription: "Helps you visualize where your portals need to go. Create a new portal with the \"n\" key",
     links: [
       {
         name: "GitHub",
