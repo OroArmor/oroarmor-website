@@ -95,6 +95,26 @@
           "link": "https://modrinth.com/mod/custom-item-range-combination"
         }
       ]
+    },
+    {
+      "name": "Portal Helper",
+      "id": "portal-helper",
+      "description": "Helps with the creation of new portals",
+      "extendedDescription": "Helps you visualize where your portals need to go. Create a new portal with the "n" key",
+      "links": [
+        {
+          "name": "GitHub",
+          "link": "https://github.com/OroArmor/PortalHelper"
+        },
+        {
+          "name": "CurseForge",
+          "link": "https://www.curseforge.com/minecraft/mc-mods/portal-helper"
+        },
+        {
+          "name": "Modrinth",
+          "link": "https://modrinth.com/mod/portal-helper"
+        }
+      ]
     }
   ]
 }
