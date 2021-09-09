@@ -23,10 +23,11 @@
     "koa-helmet": "^4.0.0",
     "koa-load-middlewares": "^1.0.0",
     "koa-minify": "^2.0.1",
-    "koa-pug": "^3.0.0-2",
+    "koa-pug": "^5.0.0",
     "koa-router": "^7.4.0",
     "koa-static": "^5.0.0",
     "nconf": "^0.10.0",
+    "nodemon": "^2.0.7",
     "programming-languages-logos": "0.0.3"
   }
 }
