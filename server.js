@@ -18,7 +18,7 @@ router.get("/404.html", async ctx => {
     })
 })
 .get("api/mods.json", async ctx => {
-    ctx.response.body = JSON.stringify(require("./configs/mods.js"));
+    ctx.response.body = JSON.stringify({ mods: require("./configs/mods.js")});
 });
 
 const port = process.env.PORT || 5000;
