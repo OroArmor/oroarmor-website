@@ -1,0 +1,136 @@
+@media screen and (max-height:1000px) {
+  #programming-content li .mod-info .mod-title {
+    font-size: 3.5rem;
+  }
+
+  #programming-content li #Interests ul li p {
+    font-size: 2.5rem;
+  }
+
+  #programming-content li #Interests ul li {
+    display: block;
+  }
+
+  .mod-info:hover #programming-list {
+    height: 7em;
+  }
+}
+
+
+@media screen and (max-height:640px) {
+  #programming-content li #Interests ul li {
+    display: inline-block;
+  }
+}
+
+@media screen and (min-width:1010px)and (max-width:1380px) {
+  #nav-pages li a {
+    font-size: 2rem !important;
+    padding-left: 5px;
+    padding-right: 5px;
+  }
+
+  #nav-social li a {
+    padding-left: 5px;
+    padding-right: 10px;
+  }
+
+  #nav-social:last-child li a {
+    padding-right: 20px;
+  }
+
+  .panel .panel-heading .panel-heading-content p {
+    font-size: 1.5em;
+  }
+}
+
+@media screen and (min-width:768px)and (max-width:1010px) {
+  :root {
+    --header-height: 100px;
+  }
+
+  #headerTitle {
+    font-size: 4rem !important;
+    padding-top: 35px;
+  }
+
+  #nav-pages li a {
+    font-size: 1.5rem !important;
+    padding-left: 4px;
+    padding-right: 4px;
+  }
+
+  #nav-social li a {
+    padding-left: 4px;
+    padding-right: 9px;
+  }
+
+  #nav-social:last-child li a {
+    padding-right: 20px;
+  }
+
+  #programming-content>li {
+    display: block;
+    width: 100%;
+    float: left;
+  }
+
+  .panel .panel-heading .panel-heading-content p {
+    font-size: 1.5em;
+  }
+}
+
+@media screen and (max-width:780px) {
+  #headerTitle {
+    font-size: 3rem !important;
+    padding-top: 35px;
+  }
+
+  .panel .panel-heading .panel-heading-header h3 {
+    font-size: 2em !important;
+  }
+
+  .panel .panel-heading .panel-heading-content h3 {
+    font-size: 1em !important;
+  }
+
+  .panel .panel-heading .panel-heading-content p {
+    font-size: 0.75em !important;
+  }
+
+  #programming-list li {
+    font-size: 1em !important;
+    height: 1em !important;
+    padding: 3px !important;
+  }
+
+  #programming-content>li {
+    display: block;
+    width: 100%;
+    float: left;
+  }
+
+  #programming-list li .programming {
+    width: 1em !important;
+  }
+
+  .mod-title {
+    margin-bottom: 0px !important;
+  }
+
+  .mod-info {
+    padding: 2px !important;
+  }
+}
+
+@media screen and (max-width:370px) {
+  .mod-info .mod-hidden {
+    height: 3em !important;
+  }
+}
+
+@media screen and (max-width:530px) {
+  .panel-body-images .fill {
+    top: 0;
+  }
+}

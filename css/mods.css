@@ -1,0 +1,20 @@
+p {
+  font-size: 1.5em !important
+}
+#main h1 {
+  text-align: center;
+  font-family: "Orbitron", bold, monospace;
+  font-size: 7em;
+  color: white;
+}
+
+#main .blurb {
+  width: 55vw;
+  margin-left: auto;
+  margin-right: auto;
+  color: white;
+}
+
+.panel {
+  height: auto !important;
+}

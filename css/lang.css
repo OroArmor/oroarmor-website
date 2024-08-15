@@ -1,0 +1,42 @@
+.programming {
+  height: 3em;
+  width: 3em;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.lang-java {
+  background-image: url(/images/programming-languages/java.svg);
+}
+
+.lang-cpp {
+  background-image: url(/images/programming-languages/cpp.svg);
+}
+
+.lang-csharp {
+  background-image: url(/images/programming-languages/csharp.svg);
+}
+
+.lang-css {
+  background-image: url(/images/programming-languages/css.svg);
+}
+
+.lang-html {
+  background-image: url(/images/programming-languages/html.svg);
+}
+
+.lang-javascript {
+  background-image: url(/images/programming-languages/javascript.svg);
+}
+
+.lang-python {
+  background-image: url(/images/programming-languages/python.svg);
+}
+
+.programming_name {
+  display: inline;
+  font-size: 1.25em !important;
+}

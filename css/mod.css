@@ -1,0 +1,18 @@
+h1, h3, h4, p{
+  text-align: center;
+  color:white !important;
+}
+
+#main {
+  width: 60vw;
+  margin-left: 20vw;
+}
+
+#main img {
+  width: 40vw;
+  margin-left: 10vw !important;
+}
+
+.link-list {
+  list-style: none;
+}
