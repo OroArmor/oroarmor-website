@@ -35,10 +35,12 @@ let options = {
     }
 }
 
-fs.rmdirSync(
-    "export",
-    {recursive: true, force: true}
-);
+if (fs.existsSync("export")) {
+    fs.rmdirSync(
+        "export",
+        {recursive: true, force: true}
+    );
+}
 
 for (let path in router.data) {
     ctx = {
