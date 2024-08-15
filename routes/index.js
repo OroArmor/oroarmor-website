@@ -1,4 +1,4 @@
-const router = require('koa-router')()
+const router = require('./router.js')
 
 const programming = require(".././configs/programming.js")
 const mods = require(".././configs/mods.js")
@@ -23,7 +23,7 @@ router.get('/', async ctx => {
 
 for(modId in mods){
   const mod = mods[modId]
-  router.get(`/mods/${mod.id}`, async ctx =>{
+  router.get(`/mods/${mod.id}`, async ctx => {
     await ctx.render('mod_pages/mod', {
       seo: {
         title: mod.name + ' | OroArmor'

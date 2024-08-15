@@ -8,26 +8,15 @@
   "author": "OroArmor",
   "scripts": {
     "start": "node server.js",
-    "dev": "nodemon -e js,json,pug,css server.js",
+    "dev": "nodemon -e js,json,pug,css server.js --ignore export/",
     "coverage": "nyc report --reporter=lcov > coverage.lcov && codecov"
   },
   "dependencies": {
     "debug": "^3.1.0",
-    "js2xmlparser": "^3.0.0",
-    "kcors": "^2.2.1",
-    "koa": "^2.5.1",
-    "koa-bodyparser": "^4.2.1",
-    "koa-cache-control": "^2.0.0",
-    "koa-compress": "^3.0.0",
-    "koa-favicon": "^2.0.1",
-    "koa-helmet": "^4.0.0",
-    "koa-load-middlewares": "^1.0.0",
-    "koa-minify": "^2.0.1",
-    "koa-pug": "^5.0.0",
-    "koa-router": "^7.4.0",
-    "koa-static": "^5.0.0",
+    "express": "^4.19.2",
     "nconf": "^0.10.0",
     "nodemon": "^2.0.7",
-    "programming-languages-logos": "0.0.3"
+    "programming-languages-logos": "0.0.3",
+    "pug": "^3.0.3"
   }
 }

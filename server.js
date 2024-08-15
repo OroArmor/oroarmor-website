@@ -1,81 +1,104 @@
 // System imports
 const path = require('path')
 
-// External modules
-const Koa = require('koa')
-const serve = require('koa-static')
+const pug = require('pug')
+const fs = require('fs')
+
+// Local code
+const router = require('./routes/');
+
+router.get("/404.html", async ctx => {
+    ctx.render('error', {
+        error: {
+            status: 404
+        },
+        seo: {
+            title: 'Error | OroArmor'
+        }
+    })
+})
+.get("api/mods.json", async ctx => {
+    ctx.response.body = JSON.stringify(require("./configs/mods.js"));
+});
 
 const port = process.env.PORT || 5000;
 
-
-// Load middleware and middleware configuration
-let middlewares = require('koa-load-middlewares')()
-const Pug = middlewares.pug
-
-// Local code
-const router = require('./routes/')
-
-// Create a new app
-const app = new Koa()
-
 // Initializes and attaches Pug
-let pug = new Pug({
+let options = {
     viewPath: path.resolve(__dirname, 'views', 'pages'),
     basedir: path.resolve(__dirname, 'views', 'partials'),
     debug: false,
-    pretty: false,
-    locals: {
-        socialMedia: require('./configs/social.js'),
-        nconf: {
-            domain: process.env.NODE_ENV == 'production' ? `${process.env.DOMAIN}` : `${process.env.DOMAIN}:${port}`
+    pretty: true,
+    socialMedia: require('./configs/social.js'),
+    nconf: {
+        domain: process.env.NODE_ENV == 'production' ? `${process.env.DOMAIN}` : `${process.env.DOMAIN}:${port}`
+    }
+}
+
+fs.rmdirSync(
+    "export",
+    {recursive: true, force: true}
+);
+
+for (let path in router.data) {
+    ctx = {
+        render: async (page, page_options) => {
+            ctx.response.body = pug.renderFile(`./views/pages/${page}.pug`, {
+                ...options,
+                ...page_options
+            });
+        },
+        response: {
+            body: null
         }
     }
-})
-pug.use(app)
+    router.data[path](ctx);
 
-console.log(process.env.DOMAIN)
+    if (ctx.response.body != null ) {
+        let fs_dir = `export/${path.substring(0)}`;
+        let fs_path = `${fs_dir}/index.html`;
+        
+        if (path === "/404") {
+            fs_dir = "export"
+            fs_path = `${fs_dir}/404.html`
+        } else if (path.indexOf(".") != -1) {
+            fs_dir = `export/${path.substring(0, path.lastIndexOf("/"))}`
+            fs_path = `export/${path}`
+        }
 
-router.get("/.well-known/pki-validation/fileauth.txt", (ctx, next) => {
-    ctx.response.body = process.env.SSL_ID;
-})
-
-// Middleware
-app.use(async (ctx, next) => {
-    try {
-        await next()
-
-        // Get the status of any responses or assume the request wasn't handled
-        console.log(router)
-        ctx.status = ctx.status || 404
-
-        // Throw any error codes, or just report and continue
-        if (ctx.status >= 400) ctx.throw(ctx.status)
-        else console.log(`\t--> ${ctx.status} OK`)
-    } catch (err) {
-        err.status = err.status || 500 // Make sure we have a status code
-
-        // Render the error page
-        ctx.render('error', {
-            error: err,
-            seo: {
-                title: 'Error | OroArmor'
+        fs.mkdirSync(
+            fs_dir,
+            {
+                recursive: true
             }
-        })
-        ctx.status = err.status // Correct the response back to an error response (since ctx.render changes it to 200)
-
-        // Tell Koa that we've handled an error
-        ctx.app.emit('err', err, ctx)
-
-        // Log the error and our response
-        console.log(err)
-        console.log(`\t--> ${ctx.status} NOT OK: ${err.message}`)
+        )
+        // write to FS
+        fs.writeFileSync(
+            fs_path,
+            ctx.response.body,
+            'utf8'
+        );
     }
-})
-    .use(router.routes())
-    .use(router.allowedMethods())
-    .use(serve(__dirname + '/public'))
+}
+fs.cpSync(
+    "public/",
+    "export/",
+    {
+        recursive: true
+    }
+)
 
-// Start the server
-module.exports = app.listen(port, () => {
-    console.log(`Server listening on port ${port}`)
-})
+if (process.env.NODE_ENV != 'production'){
+    const express = require('express')
+    const app = express()
+    app.set('view engine', 'pug')
+    app.use(express.static('export'))
+
+    // for (let path in router.data) {
+    //     app.get(path, (req, res) => router.data[path](res));
+    // }
+
+    app.listen(port, () => {
+        console.log(`Server listening on port ${port}`)
+    })
+}
